@@ -1,0 +1,75 @@
+{
+    "name": "typisttech/wp-admin-tabs",
+    "description": "Create tabbed navigation for WordPress admin dashboard, the OOP way",
+    "keywords": [
+        "wordpress",
+        "wp"
+    ],
+    "homepage": "https://www.typist.tech/projects/wp-admin-tabs",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Typist Tech",
+            "email": "wp-admin-tabs@typist.tech",
+            "homepage": "https://www.typist.tech/"
+        },
+        {
+            "name": "Tang Rufus",
+            "email": "tangrufus@gmail.com",
+            "homepage": "https://www.typist.tech/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "wp-admin-tabs@typist.tech",
+        "issues": "https://github.com/TypistTech/wp-admin-tabs/issues",
+        "source": "https://github.com/TypistTech/wp-admin-tabs"
+    },
+    "require": {
+        "php": ">7.0",
+        "typisttech/wp-kses-view": "dev-master"
+    },
+    "require-dev": {
+        "codeception/aspect-mock": "^2.0",
+        "lucatume/wp-browser": "^1.21",
+        "neronmoon/scriptsdev": "^0.1.1",
+        "wp-coding-standards/wpcs": "^0.13.1"
+    },
+    "suggest": {
+        "typisttech/imposter-plugin": "Wrap all composer vendor packages inside your own namespace, to prevent collisions when multiple plugins use this library",
+        "typisttech/wp-contained-hook": "Lazily instantiate objects from dependency injection container to WordPress hooks (actions and filters)"
+    },
+    "autoload": {
+        "psr-4": {
+            "TypistTech\\WPAdminTabs\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TypistTech\\WPAdminTabs\\": "tests/_data/"
+        }
+    },
+    "scripts": {
+        "check-style": "phpcs --standard=ruleset.xml --colors -p -s .",
+        "fix-style": "phpcbf --standard=ruleset.xml -p --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 .",
+        "install-dev-extra": [
+            "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs"
+        ],
+        "pre-tag": [
+            "composer update --no-suggest",
+            "doctoc README.md",
+            "github_changelog_generator --no-verbose"
+        ],
+        "test": "codecept run",
+        "test-with-coverage": "codecept run --coverage --coverage-xml --coverage-html"
+    },
+    "extra": {
+        "scripts-dev": {
+            "post-install-cmd": "@install-dev-extra",
+            "post-update-cmd": "@install-dev-extra"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

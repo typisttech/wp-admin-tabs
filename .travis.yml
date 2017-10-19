@@ -1,0 +1,66 @@
+language: php
+
+dist: trusty
+
+sudo: false
+
+branches:
+  only:
+    - master
+    - /^(?:(\d+)\.)?(?:(\d+)\.)?(\*|\d+)$/
+
+services:
+  - mysql
+
+cache:
+  apt: true
+  directories:
+    - $HOME/.composer/cache/files
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+php:
+  - 7.0
+  - 7.1
+  - nightly
+
+env:
+  global:
+    - COMPOSER_NO_INTERACTION=1
+  matrix:
+    - WP_VERSION=nightly
+    - WP_VERSION=latest WITH_COVERAGE=true
+    - WP_VERSION=4.8.2
+    - WP_VERSION=4.7.6
+
+matrix:
+  allow_failures:
+    - php: nightly
+    - env: WP_VERSION=nightly
+  fast_finish: true
+
+before_install:
+  # Set environment variables
+  - if [[ $(phpenv version-name) == "nightly" ]]; then export WITH_COVERAGE=false; fi
+
+  # Disable xDebug to speed up the build unless test coverage is needed
+  - if [[ "$WITH_COVERAGE" != "true" && $(phpenv version-name) != "nightly" ]]; then phpenv config-rm xdebug.ini; fi
+
+  # Install helper scripts
+  - travis_retry composer global require --prefer-dist --no-suggest typisttech/travis-nginx-wordpress
+  - export PATH=$HOME/.composer/vendor/bin:$PATH
+  - tnw-install-wordpress
+
+install:
+  - travis_retry composer install --prefer-dist --no-suggest
+
+script:
+  - if [[ "$WITH_COVERAGE" == "true" ]]; then composer test-with-coverage; fi
+  - if [[ "$WITH_COVERAGE" != "true" ]]; then composer test; fi
+
+after_script:
+  - if [[ "$WITH_COVERAGE" == "true" ]]; then travis_retry tnw-upload-coverage-to-scrutinizer; fi
+  - if [[ "$WITH_COVERAGE" == "true" ]]; then travis_retry tnw-upload-coverage-to-codecov; fi

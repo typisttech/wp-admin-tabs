@@ -1,0 +1,9 @@
+modules:
+    config:
+        WPLoader:
+            wpRootFolder: "/Users/me/Local Sites/wpadminnotices/app/public"
+            dbName: "local"
+            dbHost: "wp-admin-tabs.local:4022"
+            dbUser: "root"
+            dbPassword: "root"
+            domain: "wp-admin-tabs.local"

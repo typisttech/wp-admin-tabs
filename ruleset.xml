@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+
+<!--
+  ~ WP Admin Tabs
+  ~
+  ~ Create tabbed navigation for WordPress admin dashboard, the OOP way.
+  ~
+  ~ @package TypistTech\WPAdminTabs
+  ~
+  ~ @author Typist Tech <wp-admin-tabs@typist.tech>
+  ~ @copyright 2017 Typist Tech
+  ~ @license GPL-2.0+
+  ~
+  ~ @see https://www.typist.tech/projects/wp-admin-tabs
+  ~ @see https://github.com/TypistTech/wp-admin-tabs
+  -->
+
+<ruleset name="PSR 2 and WordPress Coding Standards for Plugins">
+
+    <description>PSR 2 and WordPress Coding Standards for Plugins</description>
+
+    <file>./</file>
+
+    <exclude-pattern>*.js</exclude-pattern>
+    <exclude-pattern>/build/*</exclude-pattern>
+    <exclude-pattern>/lib/*</exclude-pattern>
+    <exclude-pattern>/node_modules/*</exclude-pattern>
+    <exclude-pattern>/release/*</exclude-pattern>
+    <exclude-pattern>/tests/_data/*</exclude-pattern>
+    <exclude-pattern>/tests/_output/*</exclude-pattern>
+    <exclude-pattern>/vendor/*</exclude-pattern>
+
+    <rule ref="PSR2"/>
+
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <exclude-pattern>/wp-admin-tabs.php</exclude-pattern>
+    </rule>
+
+    <rule ref="WordPress">
+        <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine"/>
+        <exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine"/>
+        <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"/>
+
+        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracket"/>
+
+        <exclude name="Squiz.Commenting.ClassComment.Missing"/>
+        <exclude name="Squiz.Commenting.FunctionComment.IncorrectTypeHint"/>
+
+        <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterOpen"/>
+        <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterOpenHint"/>
+
+        <exclude name="WordPress.Arrays.ArrayDeclarationSpacing.NoSpaceAfterArrayOpener"/>
+        <exclude name="WordPress.Arrays.ArrayDeclarationSpacing.NoSpaceBeforeArrayCloser"/>
+        <exclude name="WordPress.Arrays.ArrayKeySpacingRestrictions.NoSpacesAroundArrayKeys"/>
+
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+
+        <exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"/>
+        <exclude name="WordPress.NamingConventions.ValidVariableName.MemberNotSnakeCase"/>
+        <exclude name="WordPress.NamingConventions.ValidVariableName.NotSnakeCase"/>
+        <exclude name="WordPress.NamingConventions.ValidVariableName.NotSnakeCaseMemberVar"/>
+
+        <exclude name="WordPress.WhiteSpace.CastStructureSpacing.NoSpaceBeforeOpenParenthesis"/>
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.OpenBraceNotSameLine"/>
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterCloseParenthesis"/>
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis"/>
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeCloseParenthesis"/>
+        <exclude name="WordPress.WhiteSpace.OperatorSpacing.NoSpaceAfter"/>
+        <exclude name="WordPress.WhiteSpace.OperatorSpacing.NoSpaceBefore"/>
+    </rule>
+
+    <rule ref="WordPress.Files.FileName">
+        <properties>
+            <property name="strict_class_file_names" value="false"/>
+        </properties>
+    </rule>
+
+    <rule ref="WordPress.WP.DeprecatedClasses">
+        <properties>
+            <property name="minimum_supported_version" value="4.7"/>
+        </properties>
+    </rule>
+
+    <rule ref="WordPress.WP.DeprecatedFunctions">
+        <properties>
+            <property name="minimum_supported_version" value="4.7"/>
+        </properties>
+    </rule>
+
+    <rule ref="WordPress.WP.DeprecatedParameters">
+        <properties>
+            <property name="minimum_supported_version" value="4.7"/>
+        </properties>
+    </rule>
+
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array" value="wp-admin-tabs"/>
+        </properties>
+    </rule>
+
+    <!--Tests-->
+
+    <rule ref="Squiz.Commenting.FileComment.WrongStyle">
+        <exclude-pattern>*/_bootstrap.php</exclude-pattern>
+    </rule>
+
+    <rule ref="Squiz.Commenting.InlineComment.SpacingAfter">
+        <exclude-pattern>*/_bootstrap.php</exclude-pattern>
+    </rule>
+
+    <rule ref="Squiz.Commenting.ClassComment.Missing">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="Generic.Commenting.DocComment.MissingShort">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="Squiz.Commenting.FileComment.Missing">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="Squiz.Commenting.FunctionComment.Missing">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="Squiz.Commenting.FunctionComment.MissingParamTag">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="WordPress.VIP.RestrictedVariables">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="WordPress.VIP.SuperGlobalInputUsage">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="WordPress.VIP.ValidatedSanitizedInput">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+</ruleset>
