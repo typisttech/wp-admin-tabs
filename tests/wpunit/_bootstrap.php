@@ -7,7 +7,10 @@ $kernel = \AspectMock\Kernel::getInstance();
 $kernel->init(
     [
         'debug' => true,
-        'includePaths' => [codecept_root_dir('src')],
+        'includePaths' => [
+            codecept_root_dir('src'),
+            codecept_root_dir('vendor/typisttech/wp-kses-view/src'),
+        ],
         'excludePaths' => [codecept_root_dir('tests')],
     ]
 );
