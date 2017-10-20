@@ -46,7 +46,9 @@ add_action(
             new AdminTab('Twitter', 'https://twitter.com/tangrufus'),
             new AdminTab('Blog', 'https://www.typist.tech'),
             new AdminTab('Plugins', admin_url('plugins.php')),
-            new AdminTab('Users', admin_url('users.php'))
+            new AdminTab('Users', admin_url('users.php')),
+            new AdminTab('Tab A', admin_url('tab-a.php')),
+            new AdminTab('Tab B', admin_url('tab-b.php'))
         );
         $adminTabCollection->render();
     }

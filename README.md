@@ -18,10 +18,14 @@ Create tabbed navigation for WordPress admin dashboard, the OOP way.
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [The Goals, or What This Package Does?](#the-goals-or-what-this-package-does)
 - [Install](#install)
 - [Usage](#usage)
   - [Example](#example)
+  - [AdminTab](#admintab)
+    - [`__construct(string $menuTitle, string $url)`](#__constructstring-menutitle-string-url)
+  - [AdminTabCollection](#admintabcollection)
+    - [`add(AdminTab ...$adminTabs)`](#addadmintab-admintabs)
+    - [`render()`](#render)
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [Can two different plugins use this package at the same time?](#can-two-different-plugins-use-this-package-at-the-same-time)
   - [Do you have real life examples that use this package?](#do-you-have-real-life-examples-that-use-this-package)
@@ -40,8 +44,6 @@ Create tabbed navigation for WordPress admin dashboard, the OOP way.
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## The Goals, or What This Package Does?
-
 ## Install
 
 Installation should be done via composer, details of how to install composer can be found at [https://getcomposer.org/](https://getcomposer.org/).
@@ -58,6 +60,73 @@ You should put all `WP Admin Tabs` classes under your own namespace to avoid cla
 ## Usage
 
 ### Example
+
+![Screenshot example](./assets/screenshot-example.png)
+
+```php
+$adminTabCollection = new AdminTabCollection();
+$adminTabCollection->add(
+    new AdminTab('Blog', 'https://www.typist.tech'),
+    new AdminTab('Plugins', admin_url('plugins.php')),
+    new AdminTab('Users', admin_url('users.php')),
+    new AdminTab('Tab A', admin_url('users.php')),
+    new AdminTab('Tab B', admin_url('users.php')),
+);
+$adminTabCollection->render();
+```
+
+### AdminTab
+
+#### `__construct(string $menuTitle, string $url)`
+
+`AdminTab` constructor.
+
+ * @param string $menuTitle The menu title of this tab.
+ * @param string $url       The url of this tab.
+
+```php
+new AdminTab('Blog', 'https://www.typist.tech');
+
+new AdminTab('Blog', admin_url('plugins.php'));
+```
+
+### AdminTabCollection
+
+#### `add(AdminTab ...$adminTabs)`
+
+Add admin tabs.
+ 
+ * @param AdminTab[] ...$adminTabs Admin tabs to be added.
+ 
+```php
+$adminTabCollection = new AdminTabCollection();
+
+// Add single admin tab.
+$adminTabCollection->add(
+    new AdminTab('Users', admin_url('users.php'))
+);
+
+// Add multiple admin tabs.
+$adminTabCollection->add(
+    new AdminTab('Blog', 'https://www.typist.tech'),
+    new AdminTab('Plugins', admin_url('plugins.php'))
+);
+```
+
+#### `render()`
+
+Render the tabs.
+
+```php
+$adminTabCollection = new AdminTabCollection();
+$adminTabCollection->add(
+    new AdminTab('Blog', 'https://www.typist.tech'),
+    new AdminTab('Plugins', admin_url('plugins.php')),
+    new AdminTab('Users', admin_url('users.php'))
+);
+
+$adminTabCollection->render();
+```
 
 ## Frequently Asked Questions
 
