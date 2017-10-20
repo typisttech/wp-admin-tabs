@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4af6e8d9185830d8a29d7c5d57e668d6",
+    "content-hash": "dee2942d939d3603dec49dc83e6e018a",
     "packages": [
         {
             "name": "typisttech/wp-kses-view",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TypistTech/wp-kses-view.git",
-                "reference": "db2824a5d79d0162d74de7d1ee3ab6df99d188a9"
+                "reference": "e9a5668a3d72514140e2d65ad4ff8ef70b12fd75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TypistTech/wp-kses-view/zipball/db2824a5d79d0162d74de7d1ee3ab6df99d188a9",
-                "reference": "db2824a5d79d0162d74de7d1ee3ab6df99d188a9",
+                "url": "https://api.github.com/repos/TypistTech/wp-kses-view/zipball/e9a5668a3d72514140e2d65ad4ff8ef70b12fd75",
+                "reference": "e9a5668a3d72514140e2d65ad4ff8ef70b12fd75",
                 "shasum": ""
             },
             "require": {
@@ -68,7 +68,7 @@
                 "wordpress",
                 "wp"
             ],
-            "time": "2017-10-19T20:43:47+00:00"
+            "time": "2017-10-20T05:07:10+00:00"
         }
     ],
     "packages-dev": [
@@ -6276,9 +6276,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "typisttech/wp-kses-view": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

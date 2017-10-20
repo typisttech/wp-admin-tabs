@@ -27,7 +27,7 @@
     },
     "require": {
         "php": ">7.0",
-        "typisttech/wp-kses-view": "dev-master"
+        "typisttech/wp-kses-view": "^0.1.0"
     },
     "require-dev": {
         "codeception/aspect-mock": "^2.0",
@@ -42,11 +42,6 @@
     "autoload": {
         "psr-4": {
             "TypistTech\\WPAdminTabs\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "TypistTech\\WPAdminTabs\\": "tests/_data/"
         }
     },
     "scripts": {
