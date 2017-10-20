@@ -35,14 +35,14 @@ class AdminTabCollectionTest extends WPTestCase
     }
 
     /** @test */
-    public function it_has_admin_tab_adder()
+    public function it_adds_admin_tabs()
     {
         $adminTabs = [
             new AdminTab('Tab 1', 'https://example.com/wp-admin/admin.php?page=tab1'),
             new AdminTab('Tab 2', 'https://example.com/wp-admin/admin.php?page=tab2'),
         ];
 
-        $this->adminTabCollection->addAdminTab(...$adminTabs);
+        $this->adminTabCollection->add(...$adminTabs);
 
         $this->assertAttributeSame($adminTabs, 'adminTabs', $this->adminTabCollection);
     }
@@ -54,7 +54,7 @@ class AdminTabCollectionTest extends WPTestCase
             new AdminTab('Tab 1', 'https://example.com/wp-admin/admin.php?page=tab1'),
             new AdminTab('Tab 2', 'https://example.com/wp-admin/admin.php?page=tab2'),
         ];
-        $this->adminTabCollection->addAdminTab(...$adminTabs);
+        $this->adminTabCollection->add(...$adminTabs);
 
         $actual = $this->adminTabCollection->all();
 
@@ -68,7 +68,7 @@ class AdminTabCollectionTest extends WPTestCase
             new AdminTab('Tab 1', 'https://example.com/wp-admin/admin.php?page=tab1'),
             new AdminTab('Tab 2', 'https://example.com/wp-admin/admin.php?page=tab2'),
         ];
-        $this->adminTabCollection->addAdminTab(...$adminTabs);
+        $this->adminTabCollection->add(...$adminTabs);
 
         ob_start();
         $this->adminTabCollection->render();
@@ -88,7 +88,7 @@ class AdminTabCollectionTest extends WPTestCase
             new AdminTab('Tab 1', 'https://example.com/wp-admin/admin.php?page=tab1'),
             new AdminTab('Tab 2', 'https://example.com/wp-admin/admin.php?page=tab2'),
         ];
-        $this->adminTabCollection->addAdminTab(...$adminTabs);
+        $this->adminTabCollection->add(...$adminTabs);
         $_SERVER['REQUEST_URI'] = '/wp-admin/admin.php?page=tab2';
 
         ob_start();

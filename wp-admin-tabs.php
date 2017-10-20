@@ -41,7 +41,7 @@ add_action(
     'pre_current_active_plugins',
     function () {
         $adminTabCollection = new AdminTabCollection();
-        $adminTabCollection->addAdminTab(
+        $adminTabCollection->add(
             new AdminTab('GitHub', 'https://github.com/TypistTech'),
             new AdminTab('Twitter', 'https://twitter.com/tangrufus'),
             new AdminTab('Blog', 'https://www.typist.tech'),
