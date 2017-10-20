@@ -34,13 +34,13 @@ class AdminTabCollection implements AdminTabCollectionInterface, ViewAwareTraitI
     private $adminTabs = [];
 
     /**
-     * AdminTabs setter.
+     * Add admin tabs.
      *
      * @param AdminTab[] ...$adminTabs Admin tabs to be added.
      *
      * @return void
      */
-    public function addAdminTab(AdminTab ...$adminTabs)
+    public function add(AdminTab ...$adminTabs)
     {
         $this->adminTabs = array_unique(
             array_merge($this->adminTabs, $adminTabs),

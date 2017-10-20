@@ -21,13 +21,13 @@ namespace TypistTech\WPAdminTabs;
 interface AdminTabCollectionInterface
 {
     /**
-     * AdminTabs setter.
+     * Add admin tabs.
      *
      * @param AdminTab[] ...$adminTabs Admin tabs to be added.
      *
      * @return void
      */
-    public function addAdminTab(AdminTab ...$adminTabs);
+    public function add(AdminTab ...$adminTabs);
 
     /**
      * Admin tabs getter.
