@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TypistTech/wp-kses-view.git",
-                "reference": "b95a7e15125e68be8d3c8e482c32a151a9c010b6"
+                "reference": "db2824a5d79d0162d74de7d1ee3ab6df99d188a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TypistTech/wp-kses-view/zipball/b95a7e15125e68be8d3c8e482c32a151a9c010b6",
-                "reference": "b95a7e15125e68be8d3c8e482c32a151a9c010b6",
+                "url": "https://api.github.com/repos/TypistTech/wp-kses-view/zipball/db2824a5d79d0162d74de7d1ee3ab6df99d188a9",
+                "reference": "db2824a5d79d0162d74de7d1ee3ab6df99d188a9",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +42,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "TypistTech\\WPAdminTabs\\": "src/"
+                    "TypistTech\\WPKsesView\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -68,7 +68,7 @@
                 "wordpress",
                 "wp"
             ],
-            "time": "2017-10-19T00:50:09+00:00"
+            "time": "2017-10-19T20:43:47+00:00"
         }
     ],
     "packages-dev": [
