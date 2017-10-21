@@ -62,7 +62,7 @@ class AdminTabCollectionTest extends WPTestCase
     }
 
     /** @test */
-    public function it_render_the_admin_tabs()
+    public function it_renders_the_admin_tabs()
     {
         $adminTabs = [
             new AdminTab('Tab 1', 'https://example.com/wp-admin/admin.php?page=tab1'),
