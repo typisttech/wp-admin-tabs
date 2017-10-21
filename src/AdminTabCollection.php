@@ -21,10 +21,13 @@ namespace TypistTech\WPAdminTabs;
 use TypistTech\WPKsesView\Factory;
 use TypistTech\WPKsesView\ViewAwareTrait;
 use TypistTech\WPKsesView\ViewAwareTraitInterface;
+use TypistTech\WPKsesView\ViewInterface;
 
 class AdminTabCollection implements AdminTabCollectionInterface, ViewAwareTraitInterface
 {
-    use ViewAwareTrait;
+    use ViewAwareTrait {
+        getView as protected traitGetView;
+    }
 
     /**
      * Admin tabs.
@@ -59,11 +62,11 @@ class AdminTabCollection implements AdminTabCollectionInterface, ViewAwareTraitI
     }
 
     /**
-     * Render the tabs.
+     * View getter.
      *
-     * @return void
+     * @return ViewInterface
      */
-    public function render()
+    public function getView(): ViewInterface
     {
         if (null === $this->view) {
             $this->setView(
@@ -71,7 +74,6 @@ class AdminTabCollection implements AdminTabCollectionInterface, ViewAwareTraitI
             );
         }
 
-        $closure = $this->getRenderClosure();
-        $closure();
+        return $this->traitGetView();
     }
 }

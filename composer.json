@@ -27,7 +27,7 @@
     },
     "require": {
         "php": ">7.0",
-        "typisttech/wp-kses-view": "^0.1.0"
+        "typisttech/wp-kses-view": "^0.2.0"
     },
     "require-dev": {
         "codeception/aspect-mock": "^2.0",
