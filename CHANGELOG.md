@@ -1,8 +1,16 @@
 # Change Log
 
+## [0.2.0](https://github.com/TypistTech/wp-admin-tabs/tree/0.2.0) (2017-10-22)
+[Full Changelog](https://github.com/TypistTech/wp-admin-tabs/compare/0.1.0...0.2.0)
+
+**Merged pull requests:**
+
+- Fix: `AdminTabCollection::getView` [\#4](https://github.com/TypistTech/wp-admin-tabs/pull/4) ([TangRufus](https://github.com/TangRufus))
+
 ## [0.1.0](https://github.com/TypistTech/wp-admin-tabs/tree/0.1.0) (2017-10-20)
 **Merged pull requests:**
 
+- Version bump 0.1.0 [\#3](https://github.com/TypistTech/wp-admin-tabs/pull/3) ([TangRufus](https://github.com/TangRufus))
 - Rename: `AdminTabCollectionInterface::addAdminTab` --\> `::add` [\#2](https://github.com/TypistTech/wp-admin-tabs/pull/2) ([TangRufus](https://github.com/TangRufus))
 - First release [\#1](https://github.com/TypistTech/wp-admin-tabs/pull/1) ([TangRufus](https://github.com/TangRufus))
 
