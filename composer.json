@@ -57,7 +57,8 @@
             "github_changelog_generator --no-verbose"
         ],
         "test": "codecept run",
-        "test-with-coverage": "codecept run --coverage --coverage-xml --coverage-html"
+        "test:coverage": "codecept run --coverage --coverage-xml --coverage-html",
+        "test:wpunit": "codecept run wpunit"
     },
     "extra": {
         "scripts-dev": {

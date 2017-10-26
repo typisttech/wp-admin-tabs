@@ -58,7 +58,7 @@ install:
   - travis_retry composer install --prefer-dist --no-suggest
 
 script:
-  - if [[ "$WITH_COVERAGE" == "true" ]]; then composer test-with-coverage; fi
+  - if [[ "$WITH_COVERAGE" == "true" ]]; then composer test:coverage; fi
   - if [[ "$WITH_COVERAGE" != "true" ]]; then composer test; fi
 
 after_script:
