@@ -52,7 +52,6 @@
             "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs"
         ],
         "pre-tag": [
-            "composer update --no-suggest",
             "doctoc README.md",
             "github_changelog_generator --no-verbose"
         ],
