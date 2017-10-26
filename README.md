@@ -72,7 +72,12 @@ $adminTabCollection->add(
     new AdminTab('Tab A', admin_url('users.php')),
     new AdminTab('Tab B', admin_url('users.php')),
 );
+
+// This echos the tabs:
 $adminTabCollection->render();
+
+// This returns the HTML string of the tabs:
+$html = $adminTabCollection->toHtml();
 ```
 
 ### AdminTab
@@ -95,9 +100,9 @@ new AdminTab('Blog', admin_url('plugins.php'));
 #### `add(AdminTab ...$adminTabs)`
 
 Add admin tabs.
- 
+
  * @param AdminTab[] ...$adminTabs Admin tabs to be added.
- 
+
 ```php
 $adminTabCollection = new AdminTabCollection();
 
@@ -115,7 +120,7 @@ $adminTabCollection->add(
 
 #### `render()`
 
-Render the tabs.
+Render the tabs with `echo`.
 
 ```php
 $adminTabCollection = new AdminTabCollection();
@@ -126,6 +131,21 @@ $adminTabCollection->add(
 );
 
 $adminTabCollection->render();
+```
+
+#### `toHtml(): string`
+
+Converts the tabs to HTML string without `echo`.
+
+```php
+$adminTabCollection = new AdminTabCollection();
+$adminTabCollection->add(
+    new AdminTab('Blog', 'https://www.typist.tech'),
+    new AdminTab('Plugins', admin_url('plugins.php')),
+    new AdminTab('Users', admin_url('users.php'))
+);
+
+$adminTabCollection->toHtml();
 ```
 
 ## Frequently Asked Questions

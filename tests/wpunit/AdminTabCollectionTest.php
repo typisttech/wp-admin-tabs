@@ -101,4 +101,41 @@ class AdminTabCollectionTest extends WPTestCase
 
         $this->assertSame($expected, $actual);
     }
+
+    /** @test */
+    public function it_converts_the_admin_tabs_to_html()
+    {
+        $adminTabs = [
+            new AdminTab('Tab 1', 'https://example.com/wp-admin/admin.php?page=tab1'),
+            new AdminTab('Tab 2', 'https://example.com/wp-admin/admin.php?page=tab2'),
+        ];
+        $this->adminTabCollection->add(...$adminTabs);
+
+        $actual = $this->adminTabCollection->toHtml();
+
+        $expected = '<h2 class="nav-tab-wrapper"><a href="https://example.com/wp-admin/admin.php?page=tab1" ';
+        $expected .= 'class="nav-tab ">Tab 1</a><a href="https://example.com/wp-admin/admin.php?page=tab2" ';
+        $expected .= 'class="nav-tab ">Tab 2</a></h2>';
+
+        $this->assertSame($expected, $actual);
+    }
+
+    /** @test */
+    public function it_highlights_active_tab_when_converting_to_html()
+    {
+        $adminTabs = [
+            new AdminTab('Tab 1', 'https://example.com/wp-admin/admin.php?page=tab1'),
+            new AdminTab('Tab 2', 'https://example.com/wp-admin/admin.php?page=tab2'),
+        ];
+        $this->adminTabCollection->add(...$adminTabs);
+        $_SERVER['REQUEST_URI'] = '/wp-admin/admin.php?page=tab2';
+
+        $actual = $this->adminTabCollection->toHtml();
+
+        $expected = '<h2 class="nav-tab-wrapper"><a href="https://example.com/wp-admin/admin.php?page=tab1" ';
+        $expected .= 'class="nav-tab ">Tab 1</a><a href="https://example.com/wp-admin/admin.php?page=tab2" ';
+        $expected .= 'class="nav-tab nav-tab-active">Tab 2</a></h2>';
+
+        $this->assertSame($expected, $actual);
+    }
 }

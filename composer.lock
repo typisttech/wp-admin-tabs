@@ -4,34 +4,37 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "07e91f18976d80227a45f49a7765cd2e",
+    "content-hash": "31041bd1f66fb51f4369ffda9156d387",
     "packages": [
         {
             "name": "typisttech/wp-kses-view",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TypistTech/wp-kses-view.git",
-                "reference": "431d89e2af5d8df6d0eff4d22b9c6ed6545ec261"
+                "reference": "66510a2d15a73b1d23bd3dcba12dc4dc224e0e78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TypistTech/wp-kses-view/zipball/431d89e2af5d8df6d0eff4d22b9c6ed6545ec261",
-                "reference": "431d89e2af5d8df6d0eff4d22b9c6ed6545ec261",
+                "url": "https://api.github.com/repos/TypistTech/wp-kses-view/zipball/66510a2d15a73b1d23bd3dcba12dc4dc224e0e78",
+                "reference": "66510a2d15a73b1d23bd3dcba12dc4dc224e0e78",
                 "shasum": ""
             },
             "require": {
                 "php": ">7.0"
             },
             "require-dev": {
-                "codeception/aspect-mock": "^2.0",
+                "codeception/aspect-mock": "^2.1",
                 "lucatume/wp-browser": "^1.21",
                 "neronmoon/scriptsdev": "^0.1.1",
                 "wp-coding-standards/wpcs": "^0.13.1"
             },
             "suggest": {
                 "typisttech/imposter-plugin": "Wrap all composer vendor packages inside your own namespace, to prevent collisions when multiple plugins use this library",
-                "typisttech/wp-contained-hook": "Lazily instantiate objects from dependency injection container to WordPress hooks (actions and filters)"
+                "typisttech/wp-admin-tabs": "Create tabbed navigation for WordPress admin dashboard, the OOP way",
+                "typisttech/wp-better-settings": "A simplified OOP implementation of the WP Settings API",
+                "typisttech/wp-contained-hook": "Lazily instantiate objects from dependency injection container to WordPress hooks (actions and filters)",
+                "typisttech/wp-tabbed-admin-pages": "Create WordPress admin pages with tabbed navigations, the OOP way"
             },
             "type": "library",
             "extra": {
@@ -68,7 +71,7 @@
                 "wordpress",
                 "wp"
             ],
-            "time": "2017-10-21T21:04:23+00:00"
+            "time": "2017-10-26T16:27:31+00:00"
         }
     ],
     "packages-dev": [
@@ -227,16 +230,16 @@
         },
         {
             "name": "codeception/aspect-mock",
-            "version": "2.0.1",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/AspectMock.git",
-                "reference": "b7f5c50da89419824102400bb4c71988ec33044f"
+                "reference": "bf3c000599c0dc75ecb52e19dee2b8ed294cf7ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/AspectMock/zipball/b7f5c50da89419824102400bb4c71988ec33044f",
-                "reference": "b7f5c50da89419824102400bb4c71988ec33044f",
+                "url": "https://api.github.com/repos/Codeception/AspectMock/zipball/bf3c000599c0dc75ecb52e19dee2b8ed294cf7ba",
+                "reference": "bf3c000599c0dc75ecb52e19dee2b8ed294cf7ba",
                 "shasum": ""
             },
             "require": {
@@ -262,11 +265,11 @@
             "authors": [
                 {
                     "name": "Michael Bodnarchuk",
-                    "email": "davert.php@mailican.com"
+                    "email": "davert@codeception.com"
                 }
             ],
             "description": "Experimental Mocking Framework powered by Aspects",
-            "time": "2017-01-31T20:29:56+00:00"
+            "time": "2017-10-24T10:20:17+00:00"
         },
         {
             "name": "codeception/codeception",

@@ -37,9 +37,16 @@ interface AdminTabCollectionInterface
     public function all(): array;
 
     /**
-     * Render the tabs.
+     * Echo the tab safely.
      *
      * @return void
      */
     public function render();
+
+    /**
+     * Convert the tabs to safe HTML.
+     *
+     * @return string
+     */
+    public function toHtml(): string;
 }
