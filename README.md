@@ -150,6 +150,18 @@ $adminTabCollection->toHtml();
 
 ## Frequently Asked Questions
 
+### Is this a plugin?
+
+No, this is a package that should be part of your plugin.
+
+### What to do when wp.org plugin team tell me to clean up the `vendor` folder?
+
+Re-install packages via the following command. This package exports only necessary files to `dist`.
+
+```bash
+$ composer install --no-dev --prefer-dist --optimize-autoloader
+```
+
 ### Can two different plugins use this package at the same time?
 
 Yes, if put all `WP Admin Tabs` classes under your own namespace to avoid class name conflicts.
@@ -174,10 +186,31 @@ Here you go:
 
 Love WP Admin Tabs? Help me maintain WP Admin Tabs, a [donation here](https://www.typist.tech/donate/wp-admin-tabs/) can help with it.
 
+### Donate Monero
+
+Send Monero to my public address: `43fiS7JzAK7eSHCpjTL5J1JYqPb6pvM2dGex7aoFZ5u5e5QRg6NKNnFGXqPh6C53E3M8UvqzemVt43uLgimwDpW41zXUHAp`
+
+### Mine me some Monero
+
+1. Open one of the follow web pages open on your computer
+2. Start the miner
+3. Adjust threads and CPU usages
+4. Keep it running
+
+If you have an AdBlocker:
+
+[https://authedmine.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-admin-tabs&autostart=1](https://authedmine.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-admin-tabs&autostart=1)
+
+else:
+
+[https://coinhive.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-admin-tabs&autostart=1](https://coinhive.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-admin-tabs&autostart=1)
+
 ### Why don't you hire me?
-Ready to take freelance WordPress jobs. Contact me via the contact form [here](https://www.typist.tech/contact/) or, via email info@typist.tech
+
+Ready to take freelance WordPress jobs. Contact me via the contact form [here](https://www.typist.tech/contact/) or, via email [info@typist.tech](mailto:info@typist.tech)
 
 ### Want to help in other way? Want to be a sponsor?
+
 Contact: [Tang Rufus](mailto:tangrufus@gmail.com)
 
 ## Developing

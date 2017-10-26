@@ -37,6 +37,7 @@
     },
     "suggest": {
         "typisttech/imposter-plugin": "Wrap all composer vendor packages inside your own namespace, to prevent collisions when multiple plugins use this library",
+        "typisttech/wp-better-settings": "A simplified OOP implementation of the WP Settings API",
         "typisttech/wp-contained-hook": "Lazily instantiate objects from dependency injection container to WordPress hooks (actions and filters)",
         "typisttech/wp-tabbed-admin-pages": "Create WordPress admin pages with tabbed navigations, the OOP way"
     },
@@ -52,12 +53,12 @@
             "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs"
         ],
         "pre-tag": [
-            "composer update --no-suggest",
             "doctoc README.md",
             "github_changelog_generator --no-verbose"
         ],
         "test": "codecept run",
-        "test-with-coverage": "codecept run --coverage --coverage-xml --coverage-html"
+        "test:coverage": "codecept run --coverage --coverage-xml --coverage-html",
+        "test:wpunit": "codecept run wpunit"
     },
     "extra": {
         "scripts-dev": {

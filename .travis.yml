@@ -25,6 +25,7 @@ notifications:
 php:
   - 7.0
   - 7.1
+  - 7.2
   - nightly
 
 env:
@@ -46,6 +47,10 @@ before_install:
   # Set environment variables
   - if [[ $(phpenv version-name) == "nightly" ]]; then export WITH_COVERAGE=false; fi
 
+  # Temporary disable test coverage on PHP 7.2
+  # TODO: Re-enable when PHP 7.2 published
+  - if [[ $(phpenv version-name) == "7.2" ]]; then export WITH_COVERAGE=false; fi
+
   # Disable xDebug to speed up the build unless test coverage is needed
   - if [[ "$WITH_COVERAGE" != "true" && $(phpenv version-name) != "nightly" ]]; then phpenv config-rm xdebug.ini; fi
 
@@ -58,7 +63,7 @@ install:
   - travis_retry composer install --prefer-dist --no-suggest
 
 script:
-  - if [[ "$WITH_COVERAGE" == "true" ]]; then composer test-with-coverage; fi
+  - if [[ "$WITH_COVERAGE" == "true" ]]; then composer test:coverage; fi
   - if [[ "$WITH_COVERAGE" != "true" ]]; then composer test; fi
 
 after_script:
