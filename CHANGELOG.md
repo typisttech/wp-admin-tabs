@@ -1,10 +1,20 @@
 # Change Log
 
-## [0.2.0](https://github.com/TypistTech/wp-admin-tabs/tree/0.2.0) (2017-10-22)
+## [0.3.0](https://github.com/TypistTech/wp-admin-tabs/tree/0.3.0) (2017-10-27)
+[Full Changelog](https://github.com/TypistTech/wp-admin-tabs/compare/0.2.0...0.3.0)
+
+**Merged pull requests:**
+
+- Misc: Typist Tech code style [\#9](https://github.com/TypistTech/wp-admin-tabs/pull/9) ([TangRufus](https://github.com/TangRufus))
+- Update `typisttech/wp-kses-view` to 0.3.0 [\#8](https://github.com/TypistTech/wp-admin-tabs/pull/8) ([TangRufus](https://github.com/TangRufus))
+- Readme: List WP Tabbed Admin Pages as an example [\#6](https://github.com/TypistTech/wp-admin-tabs/pull/6) ([TangRufus](https://github.com/TangRufus))
+
+## [0.2.0](https://github.com/TypistTech/wp-admin-tabs/tree/0.2.0) (2017-10-21)
 [Full Changelog](https://github.com/TypistTech/wp-admin-tabs/compare/0.1.0...0.2.0)
 
 **Merged pull requests:**
 
+- Version bump 0.2.0 [\#5](https://github.com/TypistTech/wp-admin-tabs/pull/5) ([TangRufus](https://github.com/TangRufus))
 - Fix: `AdminTabCollection::getView` [\#4](https://github.com/TypistTech/wp-admin-tabs/pull/4) ([TangRufus](https://github.com/TangRufus))
 
 ## [0.1.0](https://github.com/TypistTech/wp-admin-tabs/tree/0.1.0) (2017-10-20)
