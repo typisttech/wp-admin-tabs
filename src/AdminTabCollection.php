@@ -25,9 +25,7 @@ use TypistTech\WPKsesView\ViewInterface;
 
 class AdminTabCollection implements AdminTabCollectionInterface, ViewAwareTraitInterface
 {
-    use ViewAwareTrait {
-        getView as protected traitGetView;
-    }
+    use ViewAwareTrait;
 
     /**
      * Admin tabs.
@@ -62,18 +60,10 @@ class AdminTabCollection implements AdminTabCollectionInterface, ViewAwareTraitI
     }
 
     /**
-     * View getter.
-     *
-     * @return ViewInterface
+     * {@inheritdoc}
      */
-    public function getView(): ViewInterface
+    protected function getDefaultView(): ViewInterface
     {
-        if (null === $this->view) {
-            $this->setView(
-                Factory::build(__DIR__ . '/partials/admin-tabs.php')
-            );
-        }
-
-        return $this->traitGetView();
+        return Factory::build(__DIR__ . '/partials/admin-tabs.php');
     }
 }
