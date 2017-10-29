@@ -1,10 +1,20 @@
 # Change Log
 
+## [0.3.1](https://github.com/TypistTech/wp-admin-tabs/tree/0.3.1) (2017-10-29)
+[Full Changelog](https://github.com/TypistTech/wp-admin-tabs/compare/0.3.0...0.3.1)
+
+**Merged pull requests:**
+
+- Composer: Update wp-kses-view to 0.4.0 [\#14](https://github.com/TypistTech/wp-admin-tabs/pull/14) ([TangRufus](https://github.com/TangRufus))
+- Fix: Incorrect StyleCI badge [\#13](https://github.com/TypistTech/wp-admin-tabs/pull/13) ([TangRufus](https://github.com/TangRufus))
+- Codeception Example: Change dbHost to IP [\#12](https://github.com/TypistTech/wp-admin-tabs/pull/12) ([TangRufus](https://github.com/TangRufus))
+
 ## [0.3.0](https://github.com/TypistTech/wp-admin-tabs/tree/0.3.0) (2017-10-27)
 [Full Changelog](https://github.com/TypistTech/wp-admin-tabs/compare/0.2.0...0.3.0)
 
 **Merged pull requests:**
 
+- Version bump 0.3.0 [\#10](https://github.com/TypistTech/wp-admin-tabs/pull/10) ([TangRufus](https://github.com/TangRufus))
 - Misc: Typist Tech code style [\#9](https://github.com/TypistTech/wp-admin-tabs/pull/9) ([TangRufus](https://github.com/TangRufus))
 - Update `typisttech/wp-kses-view` to 0.3.0 [\#8](https://github.com/TypistTech/wp-admin-tabs/pull/8) ([TangRufus](https://github.com/TangRufus))
 - Readme: List WP Tabbed Admin Pages as an example [\#6](https://github.com/TypistTech/wp-admin-tabs/pull/6) ([TangRufus](https://github.com/TangRufus))
