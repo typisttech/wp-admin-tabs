@@ -7,6 +7,7 @@ $kernel = \AspectMock\Kernel::getInstance();
 $kernel->init(
     [
         'debug' => true,
+        'cacheDir' => getenv('TMPDIR') . 'AspectMock/wp-admin-tabs',
         'includePaths' => [
             codecept_root_dir('src'),
             codecept_root_dir('vendor/typisttech/wp-kses-view/src'),

@@ -1,9 +1,5 @@
 language: php
 
-dist: trusty
-
-sudo: false
-
 branches:
   only:
     - master
@@ -31,28 +27,24 @@ php:
 env:
   global:
     - COMPOSER_NO_INTERACTION=1
+    - TMPDIR=/tmp/
   matrix:
     - WP_VERSION=nightly
-    - WP_VERSION=latest WITH_COVERAGE=true
-    - WP_VERSION=4.8.2
-    - WP_VERSION=4.7.6
+    - WP_VERSION=latest
+    - WP_VERSION=4.9.4
 
 matrix:
+  include:
+    - php: '7.1'
+      env: WP_VERSION=latest WITH_COVERAGE=true
   allow_failures:
     - php: nightly
     - env: WP_VERSION=nightly
   fast_finish: true
 
 before_install:
-  # Set environment variables
-  - if [[ $(phpenv version-name) == "nightly" ]]; then export WITH_COVERAGE=false; fi
-
-  # Temporary disable test coverage on PHP 7.2
-  # TODO: Re-enable when PHP 7.2 published
-  - if [[ $(phpenv version-name) == "7.2" ]]; then export WITH_COVERAGE=false; fi
-
-  # Disable xDebug to speed up the build unless test coverage is needed
-  - if [[ "$WITH_COVERAGE" != "true" && $(phpenv version-name) != "nightly" ]]; then phpenv config-rm xdebug.ini; fi
+  - $WITH_COVERAGE || phpenv config-rm xdebug.ini || true
+  - mkdir -p $TMPDIR/AspectMock/wp-admin-tabs
 
   # Install helper scripts
   - travis_retry composer global require --prefer-dist --no-suggest typisttech/travis-nginx-wordpress
