@@ -7,10 +7,10 @@
  * @package   TypistTech\WPKsesView
  *
  * @author    Typist Tech <wp-admin-tabs@typist.tech>
- * @copyright 2017 Typist Tech
- * @license   GPL-2.0+
+ * @copyright 2017-2018 Typist Tech
+ * @license   GPL-2.0-or-later
  *
- * @see       https://www.typist.tech/projects/wp-admin-tabs
+ * @see       https://typist.tech/projects/wp-admin-tabs
  * @see       https://github.com/TypistTech/wp-admin-tabs
  */
 

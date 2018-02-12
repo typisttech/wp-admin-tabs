@@ -7,10 +7,9 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/TypistTech/wp-admin-tabs/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/TypistTech/wp-admin-tabs/?branch=master)
 [![PHP Versions Tested](http://php-eye.com/badge/typisttech/wp-admin-tabs/tested.svg)](https://travis-ci.org/TypistTech/wp-admin-tabs)
 [![StyleCI](https://styleci.io/repos/107480064/shield?branch=master)](https://styleci.io/repos/107480064)
-[![Dependency Status](https://gemnasium.com/badges/github.com/TypistTech/wp-admin-tabs.svg)](https://gemnasium.com/github.com/TypistTech/wp-admin-tabs)
 [![License](https://poser.pugx.org/typisttech/wp-admin-tabs/license)](https://packagist.org/packages/typisttech/wp-admin-tabs)
-[![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.typist.tech/donate/wp-admin-tabs/)
-[![Hire Typist Tech](https://img.shields.io/badge/Hire-Typist%20Tech-ff69b4.svg)](https://www.typist.tech/contact/)
+[![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://typist.tech/donate/wp-admin-tabs/)
+[![Hire Typist Tech](https://img.shields.io/badge/Hire-Typist%20Tech-ff69b4.svg)](https://typist.tech/contact/)
 
 Create tabbed navigation for WordPress admin dashboard, the OOP way.
 
@@ -71,7 +70,7 @@ You should put all `WP Admin Tabs` classes under your own namespace to avoid cla
 ```php
 $adminTabCollection = new AdminTabCollection();
 $adminTabCollection->add(
-    new AdminTab('Blog', 'https://www.typist.tech'),
+    new AdminTab('Blog', 'https://typist.tech'),
     new AdminTab('Plugins', admin_url('plugins.php')),
     new AdminTab('Users', admin_url('users.php')),
     new AdminTab('Tab A', admin_url('users.php')),
@@ -95,7 +94,7 @@ $html = $adminTabCollection->toHtml();
  * @param string $url       The url of this tab.
 
 ```php
-new AdminTab('Blog', 'https://www.typist.tech');
+new AdminTab('Blog', 'https://typist.tech');
 
 new AdminTab('Blog', admin_url('plugins.php'));
 ```
@@ -118,7 +117,7 @@ $adminTabCollection->add(
 
 // Add multiple admin tabs.
 $adminTabCollection->add(
-    new AdminTab('Blog', 'https://www.typist.tech'),
+    new AdminTab('Blog', 'https://typist.tech'),
     new AdminTab('Plugins', admin_url('plugins.php'))
 );
 ```
@@ -130,7 +129,7 @@ Render the tabs with `echo`.
 ```php
 $adminTabCollection = new AdminTabCollection();
 $adminTabCollection->add(
-    new AdminTab('Blog', 'https://www.typist.tech'),
+    new AdminTab('Blog', 'https://typist.tech'),
     new AdminTab('Plugins', admin_url('plugins.php')),
     new AdminTab('Users', admin_url('users.php'))
 );
@@ -145,7 +144,7 @@ Converts the tabs to HTML string without `echo`.
 ```php
 $adminTabCollection = new AdminTabCollection();
 $adminTabCollection->add(
-    new AdminTab('Blog', 'https://www.typist.tech'),
+    new AdminTab('Blog', 'https://typist.tech'),
     new AdminTab('Plugins', admin_url('plugins.php')),
     new AdminTab('Users', admin_url('users.php'))
 );
@@ -185,34 +184,13 @@ Here you go:
 
 *Add your own plugin [here](https://github.com/TypistTech/wp-admin-tabs/edit/master/README.md)*
 
-## Support!
+## Support
 
-### Donate via PayPal [![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.typist.tech/donate/wp-admin-tabs/)
-
-Love WP Admin Tabs? Help me maintain WP Admin Tabs, a [donation here](https://www.typist.tech/donate/wp-admin-tabs/) can help with it.
-
-### Donate Monero
-
-Send Monero to my public address: `43fiS7JzAK7eSHCpjTL5J1JYqPb6pvM2dGex7aoFZ5u5e5QRg6NKNnFGXqPh6C53E3M8UvqzemVt43uLgimwDpW41zXUHAp`
-
-### Mine me some Monero
-
-1. Open one of the follow web pages open on your computer
-2. Start the miner
-3. Adjust threads and CPU usages
-4. Keep it running
-
-If you have an AdBlocker:
-
-[https://authedmine.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-admin-tabs&autostart=1](https://authedmine.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-admin-tabs&autostart=1)
-
-else:
-
-[https://coinhive.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-admin-tabs&autostart=1](https://coinhive.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-admin-tabs&autostart=1)
+Love `wp-admin-tabs`? Help me maintain it, a [donation here](https://typist.tech/donation/) can help with it.
 
 ### Why don't you hire me?
 
-Ready to take freelance WordPress jobs. Contact me via the contact form [here](https://www.typist.tech/contact/) or, via email [info@typist.tech](mailto:info@typist.tech)
+Ready to take freelance WordPress jobs. Contact me via the contact form [here](https://typist.tech/contact/) or, via email [info@typist.tech](mailto:info@typist.tech)
 
 ### Want to help in other way? Want to be a sponsor?
 
@@ -242,7 +220,7 @@ $ composer test
 
 We also test all PHP files against [PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/) and part of the [WordPress coding standard](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
 
-Check the code style with ``$ composer check-style`` and fix it with ``$ composer fix-style``.
+Check the code style with ``$ composer check-style``.
 
 ## Feedback
 
@@ -264,7 +242,7 @@ Please see [CONTRIBUTING](.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT](./CODE_
 
 ## Credits
 
-[WP Admin Tabs](https://github.com/TypistTech/wp-admin-tabs) is a [Typist Tech](https://www.typist.tech) project and maintained by [Tang Rufus](https://twitter.com/Tangrufus), freelance developer for [hire](https://www.typist.tech/contact/).
+[WP Admin Tabs](https://github.com/TypistTech/wp-admin-tabs) is a [Typist Tech](https://typist.tech) project and maintained by [Tang Rufus](https://twitter.com/Tangrufus), freelance developer for [hire](https://typist.tech/contact/).
 
 Full list of contributors can be found [here](https://github.com/TypistTech/wp-admin-tabs/graphs/contributors).
 
