@@ -31,7 +31,7 @@
     },
     "require-dev": {
         "codeception/aspect-mock": "^2.1",
-        "lucatume/wp-browser": "^1.21",
+        "lucatume/wp-browser": "^2.0",
         "neronmoon/scriptsdev": "^0.1.1",
         "wp-coding-standards/wpcs": "^0.13.1"
     },
